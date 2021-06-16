@@ -20,17 +20,53 @@ switch(empCheck)
                 return 0;
 }
 }
+function calcDailyWage(empCheck)
+{
+    return empCheck * WAGE_PER_HOUR;
+}
 let totalEmpHrs = 0;
 let totalWorkingDays = 0;
+let empDailyWageArr = new Array();
+
 while(totalEmpHrs <= MAX_HRS_IN_MONTH && totalWorkingDays < NUM_OF_WORKING_DAYS )
 {
     totalWorkingDays++;
     let empCheck = Math.floor(Math.random() * 10) % 3;
-    totalEmpHrs += getWorkingHours(empCheck)
+    totalEmpHrs += getWorkingHours(empCheck);
+    empDailyWageArr.push(calcDailyWage(empCheck));
 }
-let empWage = totalEmpHrs * WAGE_PER_HOUR;
-console.log("Total_Days:"+ totalWorkingDays + " Total_Hrs:"+ totalEmpHrs + " Emp_Wage:"+ empWage);
+let empWage = calcDailyWage(totalEmpHrs);
+//console.log("Total_Days:"+ totalWorkingDays + " Total_Hrs:"+ totalEmpHrs + " Emp_Wage:"+ empWage);
+console.log("UC6 - Total_days: " +totalWorkingDays + " Emp_Wage:" + empWage);
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// # Using For Loop
 // for(let day = 0; day < NUM_OF_WORKING_DAYS; day++)
 // {
 //     let empCheck = Math.floor(Math.random() * 10 % 3);
