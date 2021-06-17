@@ -116,7 +116,11 @@ console.log("UC-7G- Number Of Days Emp Worked:" +
 empDailyWageArr.reduce(totalDaysWorked,0));
 
 //UC8
-
+console.log(empDailyWageMap);
+function totalWages(totalWage, dailyWage)
+{
+    return totalWage + dailyWage;
+}
 console.log("UC-8- Emp Wage Map TotalHrs: " + 
 Array.from(empDailyWageMap.values()).reduce(totalWages, 0));
 
